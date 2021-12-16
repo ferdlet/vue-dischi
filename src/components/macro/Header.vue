@@ -1,5 +1,5 @@
 <template>
-  <header class="py-2 ps-2">
+  <header class="ps-3">
      <img src="../../assets/img/spotify-logo.png" alt="Spotify"> 
   </header>
 </template>
@@ -14,6 +14,10 @@ export default {
 
 header {
   background-color: #2E3A46;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 img {
