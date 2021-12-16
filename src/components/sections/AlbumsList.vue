@@ -51,6 +51,7 @@ export default {
     padding: 50px 0;
     display: flex;
     flex-wrap: wrap;
+    text-align: center;
     .album_container {
       width: calc(100% - 100px);
       margin: 20px 50px;
@@ -70,6 +71,8 @@ export default {
   // ***** ANIMANZIONE CARICAMENTO API *****
 
   .caricamento {
+    width: 100%;
+    text-align: center;
     color: white;
   }
   .loader {
