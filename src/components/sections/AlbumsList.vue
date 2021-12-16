@@ -1,5 +1,5 @@
 <template>
-  <section id="albums-list" class="container" v-if="albums.length == 10">
+  <section id="albums-list" class="container" v-if="fineCaricamento == true">
     <div class="album_container" v-for="(album, index) in albums" :key="index">
       <Album :info="album"/>
     </div>
@@ -28,6 +28,7 @@ export default {
     data() {
       return {
         albums: [],
+        fineCaricamento: false,
       }
     },
     created() {
@@ -35,6 +36,7 @@ export default {
         .then((response) => {
             // handle success
             this.albums = response.data.response;
+            this.fineCaricamento = true;
         })
         .catch(function (error) {
             // handle error
@@ -49,7 +51,6 @@ export default {
     padding: 50px 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     .album_container {
       width: calc(100% - 100px);
       margin: 20px 50px;
